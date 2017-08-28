@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h1>Person wurde Erstellt!</h1>
+<h2>Daten:</h2>
+<p th:text="'Vorname ' + ${person.firstname} "/>
+<p th:text="'Nachname ' + ${person.lastname} "/>
+<p th:text="'Geburtstag ' + ${#dates.format(person.bday, 'dd.MM.yyyy')}" />
+</body>
+</html>
